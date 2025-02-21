@@ -117,6 +117,7 @@ $string['aclownerrole'] = 'ACL owner role';
 $string['aclownerrole_desc'] = 'Name of the role that identifies the owner of a video/series. The role must also be specified in the roles table. The role must be permanent and include a user-related placeholder, e.g. ROLE_OWNER_[USER_EMAIL]. It should not include any course-related placeholders. If empty, owner-related plugin functionalities are disabled.';
 $string['aclrolesname'] = 'Roles';
 $string['aclrolesnamedesc'] = 'You can use placeholders in the role name which are automatically replaced (<a target="_blank" href="https://moodle.docs.opencast.org/#block/general_settings/#placeholders">list of placeholders</a>). The list of actions must be comma-separated.';
+$string['addactivity_defaulttitle'] = 'Opencast videos';
 $string['addactivity_settingavailability'] = 'Set series module availability';
 $string['addactivity_settingavailability_desc'] = 'If enabled, teachers can set the availability conditions when a new Opencast Video Provider activity for series is added to a course.';
 $string['addactivity_settingavailability_note'] = 'Please note: This feature is only available if availability is globally enabled on the {$a} admin setting page.';
@@ -143,6 +144,7 @@ $string['addlti_settingavailability_note'] = 'Please note: This feature is only 
 $string['addlti_settingdefaulttitle'] = 'Default LTI series module title';
 $string['addlti_settingdefaulttitle_desc'] = 'The default title to be used when a new Opencast LTI series module is added to a course.';
 $string['addlti_settingenabled'] = 'Enable "Add LTI series module"';
+$string['addlti_defaulttitle'] = 'Opencast videos';
 $string['addlti_settingenabled_desc'] = 'If enabled, teachers can add an Opencast LTI series module to a course. This LTI series module will be pointing to the course\'s Opencast series.';
 $string['addlti_settingintro'] = 'Add series module intro';
 $string['addlti_settingintro_desc'] = 'If enabled, teachers can add an intro to the Opencast LTI series module. This intro will be shown on the course overview page.';
