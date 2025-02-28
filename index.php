@@ -279,13 +279,13 @@ if (has_capability('block/opencast:addvideo', $coursecontext) && $SITE->id != $c
     }
 
     // Show "Add video" button.
-    $addvideourl = new moodle_url('/blocks/opencast/addvideo.php', ['courseid' => $courseid, 'ocinstanceid' => $ocinstanceid]);
+    $addvideourl = new moodle_url('/admin/tool/opencast/addvideo.php', ['courseid' => $courseid, 'ocinstanceid' => $ocinstanceid]);
     $addvideobutton = $OUTPUT->single_button($addvideourl, get_string('addvideo', 'block_opencast'), 'get');
     echo html_writer::div($addvideobutton);
 
     // Show "Add videos (batch)" button.
     if (get_config('tool_opencast', 'batchuploadenabled_' . $ocinstanceid)) {
-        $batchuploadurl = new moodle_url('/blocks/opencast/batchupload.php',
+        $batchuploadurl = new moodle_url('/admin/tool/opencast/batchupload.php',
             ['courseid' => $courseid, 'ocinstanceid' => $ocinstanceid]);
         $batchuploadbutton = $OUTPUT->single_button($batchuploadurl, get_string('batchupload', 'block_opencast'), 'get');
         echo html_writer::div($batchuploadbutton, 'opencast-batchupload-wrap');
@@ -318,7 +318,7 @@ if (has_capability('block/opencast:addvideo', $coursecontext) && $SITE->id != $c
                 null, ['class' => 'btn btn-secondary', 'target' => $target]);
             echo html_writer::div($recordvideobutton, 'opencast-recordvideo-wrap');
         } else {
-            $recordvideo = new moodle_url('/blocks/opencast/recordvideo.php',
+            $recordvideo = new moodle_url('/admin/tool/opencast/recordvideo.php',
                 ['courseid' => $courseid, 'ocinstanceid' => $ocinstanceid]);
             $recordvideobutton = $OUTPUT->action_link($recordvideo, get_string('recordvideo', 'block_opencast'),
                 null, ['class' => 'btn btn-secondary', 'target' => $target]);
@@ -449,7 +449,7 @@ foreach ($seriesvideodata as $series => $videodata) {
 
             // Title column.
             if ($engageurl) {
-                $row[] = html_writer::link(new moodle_url('/blocks/opencast/engageredirect.php',
+                $row[] = html_writer::link(new moodle_url('/admin/tool/opencast/engageredirect.php',
                     ['identifier' => $video->identifier, 'courseid' => $courseid,
                         'ocinstanceid' => $ocinstanceid, ]), $video->title, ['target' => '_blank']);
             } else {
@@ -660,7 +660,7 @@ if (importvideosmanager::is_enabled_and_working_for_manualimport($ocinstanceid) 
 
         if ($renderimport) {
             // Show "Import videos" button.
-            $importvideosurl = new moodle_url('/blocks/opencast/importvideos.php',
+            $importvideosurl = new moodle_url('/admin/tool/opencast/importvideos.php',
                 ['courseid' => $courseid, 'ocinstanceid' => $ocinstanceid]);
             $importvideosbutton = $OUTPUT->single_button($importvideosurl,
                 get_string('importvideos_importbuttontitle', 'block_opencast'), 'get');
